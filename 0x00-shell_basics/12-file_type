@@ -1,2 +1,2 @@
 #!/bin/bash
-less /tmp/iamafile
+printf "%s" "$(</tmp/iamafile)"
