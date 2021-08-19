@@ -1,0 +1,1 @@
+Script to print working directory added in file within 0x00-shell_basics
