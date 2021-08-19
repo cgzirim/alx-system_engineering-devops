@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%s" "$(</tmp/iamafile)"
+file
