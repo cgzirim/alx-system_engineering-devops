@@ -1,2 +1,2 @@
 #!/bin/bash
-echo /tmp/iamafile
+less /tmp/iamafile
