@@ -1,0 +1,2 @@
+#!/bin/bash
+printf %.10f\\n "$(( $NUM  ))e-9"
