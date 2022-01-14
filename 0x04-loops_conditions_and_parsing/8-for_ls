@@ -4,5 +4,5 @@
 
 for i in *
 do
-	echo $i | cut -d '-' -f2
+	echo "$i" | cut -d '-' -f2
 done
