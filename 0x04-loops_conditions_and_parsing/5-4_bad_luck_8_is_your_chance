@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Write a Bash script that loops from 1 to 10 and
+# Loops from 1 to 10 and
 # displays 'bad luck' for the 4th loop iteration,
 # 'good luck' for the 8th loop iteration, and
 # 'Best School' for the other iterations.
