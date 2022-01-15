@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Displays To 'infinity and beyond' indefinitely with
-#+ sleep in between each iteration.
+#+ a sleep in between each iteration.
 
 while true
 do
