@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# Displays To 'infinity and beyond' indefinitely
+# Displays To 'infinity and beyond' indefinitely with
+#+ sleep in between each iteration.
 
-i=1
-while [ $i -eq 1 ]
+while true
 do
 	echo "To infinity and beyond"
 	sleep 2
