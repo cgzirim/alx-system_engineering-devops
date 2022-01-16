@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Stops 4-to_infinity_and_beyond process.
 
-kill -9 "$(pidof 4-to_infinity_and_beyond)"
+kill -9 "$(pgrep 4-to_infinity_and_beyond)"
