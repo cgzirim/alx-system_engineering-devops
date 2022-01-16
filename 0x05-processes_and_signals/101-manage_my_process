@@ -30,7 +30,7 @@ restart() {
 	# Creates a file containing its PID in /var/run/my_process.pid
 	# Displays manage_my_process restarted.
 
-	kill "$(pgrep -f manage_my_process)"
+	kill "$(pgrep -f /manage_my_process)"
         rm /var/run/my_process.pid
 	./manage_my_process &
 	echo $$ >> /var/run/my_process.pid
