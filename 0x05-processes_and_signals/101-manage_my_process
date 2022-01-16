@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+# This Bash(init) script manages manage_my_process.
+# Displays Usage: manage_my_process {start|stop|restart} if
+#+ if any other argument or no argument is passed.
+
+start() {
+	# Starts manage_my_process
+	# Creates a file containing its PID in /var/run/my_process.pid
+	# Displays manage_my_process started
+
+	./manage_my_process &
+	pgrep -f manage_my_process >> /var/run/my_process.pid
+	echo "manage_my_process started"
+}
+
+stop() {
+	# Stops manage_my_process
+	# Deletes the file /var/run/my_process.pid
+	# Displays manage_my_process stopped
+
+	kill "$(pgrep -f manage_my_process)"
+	rm /var/run/my_process.pid
+	echo "manage_my_process stopped"
+}
+
+restart() {
+	# Stops manage_my_process.
+	# Deletes the file /var/run/my_process.pid
+	# Starts manage_my_process
+	# Creates a file containing its PID in /var/run/my_process.pid
+	# Displays manage_my_process restarted.
+
+	kill "$(pgrep -f manage_my_process)"
+        rm /var/run/my_process.pid
+	./manage_my_process &
+	pgrep -f manage_my_process >> /var/run/my_process.pid
+	echo "manage_my_process restarted"
+}
+
+case $1 in
+	start)
+		start ;;
+	stop)
+		stop ;;
+	restart)
+		restart ;;
+	*)
+		echo "Usage: manage_my_process {start|stop|restart}"
+	esac
+
