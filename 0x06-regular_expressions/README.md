@@ -7,7 +7,7 @@ In this project, I learned how to use regular expressions. I practiced writing t
 - **1. Repetition Token #0**
   - [1-repetition_token_0.rb](https://github.com/iChigozirim/alx-system_engineering-devops/blob/master/0x06-regular_expressions/1-repetition_token_0.rb): Ruby script that matches the regular expression `hbn` with between 2-5 `t`'s in between hb and n.
 - **2. Repetition Token #1**
-  - [2-repetition_token_1.rb](https://github.com/iChigozirim/alx-system_engineering-devops/blob/master/0x06-regular_expressions/3-repetition_token_2.rb): Ruby script that matches the regular expressions `hbn` and `hbtn`.
+  - [2-repetition_token_1.rb](https://github.com/iChigozirim/alx-system_engineering-devops/blob/master/0x06-regular_expressions/3-repetition_token_2.rb): Ruby script that matches the regular expressions `htn` and `hbtn`.
 - **3. Repetition Token #2**
   - [3-repetition_token_2.rb](https://github.com/iChigozirim/alx-system_engineering-devops/blob/master/0x06-regular_expressions/3-repetition_token_2.rb): Ruby script that matches the regular expression `hbtn` with a variant number of the character `t`.
 - **4. Repetition Token #3**
