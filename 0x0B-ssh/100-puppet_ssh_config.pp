@@ -1,4 +1,5 @@
 # Modifies client configuration file.
+include stdlib
 
 file_line { 'Disable passwd auth':
   ensure  => present,
