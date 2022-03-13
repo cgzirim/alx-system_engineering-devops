@@ -3,7 +3,7 @@
 file_line { 'Disable passwd auth':
   ensure  => present,
   path    => '/etc/ssh/sshd_config',
-  line    => 'PasswordAuthentication no',
+  line    => '     PasswordAuthentication no',
   replace => true,
 }
 
