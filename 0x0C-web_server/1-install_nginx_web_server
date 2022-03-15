@@ -8,12 +8,16 @@
 sudo apt update
 sudo apt install -y nginx
 
-# Allow trafic on port 80
-sudo ufw 'Nginx HTTP'
-
-sudo chown -R $USER:$USER /var/www/html
-sudo chmod -R 755 /var/www/html
-rm index.nginx-debian.html
-echo "Hello World!" >> /var/www/html/index.html
+mkdir /etc/nginx/html
+echo "Hello World!" >> /etc/nginx/html/index.html
+printf %s "server {
+    listen 80;
+    listen [::]:80 default_server;
+    root   /etc/nginx/html;
+    index  index.html index.htm;
+    location /redirect_me {
+        return 301 http://cuberule.com/;
+    }
+}" > /etc/nginx/sites-available/default
 
 service nginx restart
