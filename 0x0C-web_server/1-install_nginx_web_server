@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Installs a webserver, nginx.
-# Install nginx on my server
-#+ Nginx should listen on port 80
-#+ When querying Nginx at it's root using curl, it must
-#+ return a page containing the string Hello World!
+#   Install nginx on my server
+#+  Nginx should listen on port 80
+#+  When querying Nginx at it's root using curl, it must
+#++ return a page containing the string Hello World!
 
 sudo apt update
 sudo apt install -y ngix
@@ -15,5 +15,12 @@ sudo chown -R $USER:$USER /var/www/html
 sudo chmod -R 755 /var/www/html
 rm index.nginx-debian.html
 echo "Hello World!" >> /var/www/html/index.nginx-debian.html
+printf %s "server {
+     listen      80 default_server;
+     listen      [::]:80 default_server;
+     root        /etc/nginx/html;
+     index       index.html index.htm;
+}
+" > /etc/nginx/sites-available/default
 
 service nginx restart
