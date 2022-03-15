@@ -6,7 +6,7 @@
 #++ return a page containing the string Hello World!
 
 sudo apt update
-sudo apt install -y ngix
+sudo apt install -y nginx
 
 # Allow trafic on port 80
 sudo ufw 'Nginx HTTP'
