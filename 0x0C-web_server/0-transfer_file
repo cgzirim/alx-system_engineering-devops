@@ -8,5 +8,5 @@ then
  kill -INT $$
 fi
 
-scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
-$1 $3@$2:$4
+#scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
+scp $1 $3@$2:$4
