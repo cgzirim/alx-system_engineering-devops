@@ -8,8 +8,8 @@ apt-get -y install ngnix
 mkdir /etc/nginx/html
 echo "Hello World!" >> /etc/ngix/html/index.html
 printf %s "server {
-	listen 80;
-	listen[::]:80;
+	listen 80 default_server;
+	listen[::]:80 default_server;
 
 	root /etc/ngix/html;
 	
