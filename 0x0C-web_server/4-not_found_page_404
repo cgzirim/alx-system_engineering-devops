@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+#  Configure your Nginx server to have a custom 404 page that contains the
+#+ string Ceci n'est pas une page.
+
+apt-get update
+apt-get -y install nginx
+
+mkdir /etc/nginx/html
+echo "Hello World!" >> /etc/nginx/html/index.html
+echo "Ceci n'est pas une page" >> /etc/nginx/html/custom_404.html
+
+print %s "server {
+	listen 80;
+	listen [::]:80 default_server;
+	root /etc/nginx/html;
+	index index.html index.htm;
+
+	location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4/;
+	}
+
+	error_page 404 /custom_404.html;
+	location = /custom_404.html {
+		root /etc/nginx/html;
+		internal;
+	}
+}" > /etc/nginx/sites-available/default
+
+service nginx restart
