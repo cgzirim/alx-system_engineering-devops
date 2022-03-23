@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 # Installs Nginx, restarts the server, and runs curl 0:80
 
-apt-get update
-apt-get install -y nginx
-
 service ngnix restart
