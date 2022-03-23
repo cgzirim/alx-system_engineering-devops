@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Restarts the nginx service. Runs curl 0:80. Stops Nginx service.
+service nginx restart
+curl 0:80
+service nginx stop
