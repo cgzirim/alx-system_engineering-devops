@@ -2,4 +2,4 @@
 # Configures an Nginx sever to listen on port 80. Stops Nginx service.
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
-service nginx stop
+kill "$(pgrep 'nginx' | head -1)"
