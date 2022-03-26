@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-# Installs Nginx, restarts the server, and runs curl 0:80
-
-rm /etc/nginx/sites-enabled/default
-ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service ngnix restart
