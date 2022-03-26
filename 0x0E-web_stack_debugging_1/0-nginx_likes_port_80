@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Configures an Nginx server to listen on port 80.
 
+ufw allow 'Nginx HTTP' 2> /dev/null
 rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
