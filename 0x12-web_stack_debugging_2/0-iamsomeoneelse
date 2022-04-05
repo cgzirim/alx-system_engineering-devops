@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-# Run the whoami command under the user passed as an argument.
 su -c whoami $1
