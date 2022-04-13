@@ -4,17 +4,13 @@ import requests
 from sys import argv
 
 
-url = "https://jsonplaceholder.typicode.com/"
-user = requests.get(url + "users/{}".format(argv[1])).json()['name']
-tasks = [d for d in requests.get(url + "todos").json() \
-        if d["userId"] == int(argv[1])]
+if __name__ == "__main__":
+        url = "https://jsonplaceholder.typicode.com/"
+        user = requests.get(url + "users/{}".format(argv[1])).json()['name']
+        tasks = requests.get(url + "todos", params={"userId": argv[1]}).json()
+        print(requests.get(url + "todos", params={"userId": argv[1]}).url)
 
-tsks_done = 0
-tsks_num = 0
-for t in tasks:
-        tsks_num += 1
-        if t['completed']:
-                tsks_done += 1
-print("Employee {} is done with tasks({}/{}):".format(user, tsks_done,
-tsks_num))
-[print("\t " + t['title']) for t in tasks if t['completed']]
+        completed = [t["title"] for t in tasks if t["completed"] is True]
+        print("Employee {} is done with tasks({}/{}):".format(user,
+        len(completed), len(tasks)))
+        [print("\t {}".format(t)) for t in completed]
