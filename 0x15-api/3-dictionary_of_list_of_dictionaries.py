@@ -17,8 +17,8 @@ if __name__ == "__main__":
 
         dicts = []
         for t in tasks:
-            dicts.append({"username": username, "task": t['title'],
-                         "completed": t['completed']})
+            dicts.append({"task": t['title'],
+                         "completed": t['completed'], "username": username})
         data[u_id] = dicts
 
     jsonString = json.dumps(data)
