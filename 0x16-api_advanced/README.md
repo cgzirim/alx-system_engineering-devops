@@ -15,4 +15,11 @@ In this project i
 
 [comment]: <> (task_1_end)
 
+[comment]: <> (task_2_begin)
+
+- #### 1. Top Ten
+	- [1-top_ten.py](https://github.com/iChigozirim/alx-system_engineering-devops/tree/master/0x16-api_advanced/1-top_ten.py):Queries the Reddit API and prints the titles of the first 10 hot posts listed for a given subreddit.
+	- If not a valid subreddit, print None.
+
+[comment]: <> (task_2_end)
 [comment]: <> (Section_1_end)
