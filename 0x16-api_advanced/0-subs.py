@@ -12,7 +12,7 @@ def number_of_subscribers(subreddit):
     """
     api_url = "https://reddit.com/r/" + subreddit + "/about.json"
     headers = {'User-Agent': 'MyAPI/0.01'}
-    
+
     response = requests.get(api_url, headers=headers)
     if response.status_code >= 300:
         return 0
