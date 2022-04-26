@@ -13,6 +13,7 @@ def top_ten(subreddit):
     response = requests.get(api_url, headers=headers, params={'limit': '10'})
     if response.status_code >= 300:
         print("None")
+        return
 
     for post in response.json()['data']['children']:
         print(post['data']['title'])
