@@ -30,4 +30,4 @@ def recurse(subreddit, hot_list=[], after=None, count=0):
     if after is None:
         return hot_list
 
-    recurse(subreddit, hot_list, after=after)
+    recurse(subreddit, hot_list, after=after, count=count)
