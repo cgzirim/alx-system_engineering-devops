@@ -1,7 +1,7 @@
 [comment]: <> (Section_0_begin)
 
 # 0x0A. Configuration management
-In this project, I learned about configuration management and how to use the too Puppet. I practiced writing Puppet manifest files to create a file, install a package, and execute a command.
+In this project, I learned about configuration management and how to use the tool Puppet. I practiced writing Puppet manifest files to create a file, install a package, and execute a command.
 
 [comment]: <> (Section_0_end)
 [comment]: <> (Section_1_begin)
@@ -11,10 +11,10 @@ In this project, I learned about configuration management and how to use the too
 
 - #### 0. Create a file
 	- [0-create_a_file.pp](https://github.com/iChigozirim/alx-system_engineering-devops/tree/master/0x0A-configuration_management/0-create_a_file.pp): Puppet manifest file that creates a file `school` in the `/tmp` directory.
-	- - File permissions: `0744`.
-	-  File group: `www-data
-	- - File owner: `www-data`.
-	- - File content: `I love Puppet`.
+		- File permissions: `0744`.
+		- File group: `www-data`.
+	 	- File owner: `www-data`.
+	 	- File content: `I love Puppet`.
 
 [comment]: <> (task_1_end)
 
