@@ -3,7 +3,7 @@
 import requests
 
 
-def recurse(subreddit, hot_list=[], fullname=None):
+def recurse(subreddit, hot_list=[], after=None):
     """Returns a list containing the titles of all hot articles for a given
     subreddit.
     - Returns None if no results are found for the given subreddit.
@@ -12,18 +12,19 @@ def recurse(subreddit, hot_list=[], fullname=None):
     headers = {'User-Agent': 'MyAPI/0.01'}
 
     response = requests.get(api_url, headers=headers)
-    if fullname is not None:
-         response = requests.get(api_url, headers=headers, params={
-                                'after': fullname})
+    if after is not None:
+        response = requests.get(api_url, headers=headers, params={
+            'after': after})
 
     if response.status_code >= 300:
         return None
 
-    post = response.json()['data']['children'][0]
-    hot_list.append(post['data']['title'])
-    fullname = post['kind'] + '_' + post['data']['id']
+    for post in response.json()['data']['children']:
+        hot_list.append(post['data']['title'])
 
-    if response.get(after) is None:
+    after = response.json().get("data").get("after")
+
+    if after is None:
         return hot_list
 
-    recurse(subreddit, hot_list, fullname=fullname)
+    recurse(subreddit, hot_list, after=after)
