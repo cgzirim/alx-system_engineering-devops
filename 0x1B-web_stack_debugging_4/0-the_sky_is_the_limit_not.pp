@@ -1,6 +1,13 @@
-# Fix Nginx error: failed (24: Too many open files)
+# Increases the amount of traffic an Nginx server can handle.
 
-exec { "fix-Nginx_failed_requests":
-        command => 'sed -i s/UNLIMIT="-n 15"/UNLIMIT="-n 500"/g /etc/default/nginx',
+# Increase the ULIMIT of the default file
+exec { 'fix-Nginx_failed_requests':
+        command => 'sed -i s/15/500/g /etc/default/nginx',
         path    => '/usr/local/bin/:/bin/'
+}
+
+# Restart Nginx
+-> exec { 'restart-nginx':
+  command => 'nginx restart',
+  path    => '/etc/init.d'
 }
