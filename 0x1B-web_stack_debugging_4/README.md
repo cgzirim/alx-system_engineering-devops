@@ -6,7 +6,7 @@ This was the fifth in a series of web stack debugging projects. In these project
 [comment]: <> (Section_0_end)
 [comment]: <> (Section_1_begin)
 
-## Tasks📃
+## Tasks 📃
 [comment]: <> (task_1_begin)
 
 - #### 0. Sky is the limit, let's bring that limit higher
