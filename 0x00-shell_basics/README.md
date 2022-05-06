@@ -10,14 +10,14 @@ In this project, I learned how to navigate directories, how to look around, and 
 [comment]: <> (task_1_begin)
 
 - #### 0. Where am I?
-	- [0-current_working_directory](https://github.com/iChigozirim/alx-system_engineering-devops/0-current_working_directory): Bash script that prints the absolute pathname of the current working directory.
+	- [0-current_working_directory](https://github.com/iChigozirim/alx-system_engineering-devops/tree/master/0x00-shell_basics/0-current_working_directory): Bash script that prints the absolute pathname of the current working directory.
 
 [comment]: <> (task_1_end)
 
 [comment]: <> (task_2_begin)
 
 - #### 3. The long format
-	- [3-listfiles](https://github.com/iChigozirim/alx-system_engineering-devops/3-listfiles): Bash script that displays current directory contents in long format.
+	- [3-listfiles](https://github.com/iChigozirim/alx-system_engineering-devops/tree/master/0x00-shell_basics/3-listfiles): Bash script that displays current directory contents in long format.
 
 [comment]: <> (task_2_end)
 [comment]: <> (Section_1_end)
