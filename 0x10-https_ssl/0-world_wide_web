@@ -1,0 +1,40 @@
+#!/bin/env bash
+#  Audits a domain name.
+#  Accepts 2 arguments:
+#+ 	$1 (string): domain name to audit.
+#+ 	mandatory: yes
+#	$2 (string) a specific subdomain to audit.
+#	mandatory: no
+
+
+print_output () {
+	# Prints a string
+	#  Parameters:
+	#+ 	$1: a subdomain
+	#+ 	$2: the result of dig for a subdomain name.
+
+	record_type=$(awk '{print $4}' $2)
+	destination=$(awk '{print $5}' $2)
+  	echo "The subdomain" $1 "is a" $record_type "record and points to" $destination
+}
+
+
+if [ -z "$2" ]
+then
+	dig www."$1" | grep -A1 'ANSWER SECTION:' > dig.txt
+	print_output "www" dig.txt
+
+	dig lb-01."$1" | grep -A1 'ANSWER SECTION:' > dig.txt
+        print_output "lb-01" dig.txt
+
+	dig web-01."$1" | grep -A1 'ANSWER SECTION:' > dig.txt
+        print_output "web-01" dig.txt
+
+	dig web-02."$1" | grep -A1 'ANSWER SECTION:' > dig.txt
+        print_output "web-02" dig.txt
+else
+	dig "$2"."$1" | grep -A1 'ANSWER SECTION:' > dig.txt
+	print_output "$2" dig.txt
+fi
+
+rm dig.txt
