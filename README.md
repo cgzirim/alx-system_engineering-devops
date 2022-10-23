@@ -9,4 +9,4 @@ The programs in this repository were created for Holberton School's system engin
 
 ## Acknowledgments :raised_hands:
 
-All work contained in this project was completed as part of the curriculum for Holberton School, which is utilized by ALX. ALX is an online-based full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning. For more information, visit this [link](https://www.alxafrica.com/software-engineering-2022).
+All work contained in this project was completed as part of the curriculum for Holberton School, which is utilized by ALX. ALX is an online-based full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning. For more information, visit this [link](https://www.alxafrica.com/software-engineering).
